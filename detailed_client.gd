@@ -13,11 +13,7 @@ func _ready() -> void:
 	for utente in utenti:
 		var id_utente = str(utente.get("id", "")).strip_edges()
 		var id_ricevuto = str(Global.selected_client_id).strip_edges()
-
-		print("Comparo:", id_utente, "==", id_ricevuto)
-
 		if id_utente == id_ricevuto:
-			print("TROVATOO")
 			get_node("nomeCognome2").text = "[font_size=40]" + utente["name"] + " " + utente["cognome"] + "[/font_size]"
 			get_node("email").text = "[font_size=40]" + utente["email"] + "[/font_size]"
 			get_node("numero").text = "[font_size=40]" + str(utente["numTelefono"]) + "[/font_size]"

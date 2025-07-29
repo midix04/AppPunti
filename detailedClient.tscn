@@ -59,10 +59,10 @@ offset_bottom = 533.0
 bbcode_enabled = true
 
 [node name="soldi" type="RichTextLabel" parent="."]
-offset_left = 169.0
-offset_top = 558.0
-offset_right = 691.0
-offset_bottom = 691.0
+offset_left = 133.0
+offset_top = 543.0
+offset_right = 655.0
+offset_bottom = 676.0
 bbcode_enabled = true
 
 [node name="punti" type="RichTextLabel" parent="."]

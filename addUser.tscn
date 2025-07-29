@@ -18,14 +18,14 @@ offset_left = 56.0
 offset_top = 64.0
 offset_right = 510.0
 offset_bottom = 195.0
-placeholder_text = "Nome del cliente"
+placeholder_text = "Nome del cliente*"
 
 [node name="Cognome" type="TextEdit" parent="."]
 offset_left = 56.0
 offset_top = 256.0
 offset_right = 510.0
 offset_bottom = 387.0
-placeholder_text = "Cognome del cliente"
+placeholder_text = "Cognome del cliente*"
 
 [node name="Numero" type="TextEdit" parent="."]
 offset_left = 56.0
