@@ -1,0 +1,71 @@
+[gd_scene load_steps=5 format=3 uid="uid://dweafhnobnew0"]
+
+[ext_resource type="Texture2D" uid="uid://cp4njus5nmcqj" path="res://sprites/pixil-frame-0 (9).png" id="1_024d2"]
+[ext_resource type="Script" uid="uid://cis1kw2hvej27" path="res://add_user.gd" id="1_k3ucr"]
+[ext_resource type="Texture2D" uid="uid://cdylkc8ybfjg7" path="res://sprites/btns/add.png" id="2_sspmi"]
+[ext_resource type="Texture2D" uid="uid://dd1i76ftq734u" path="res://sprites/btns/addHover.png" id="3_l30n5"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_k3ucr")
+
+[node name="backGround" type="Sprite2D" parent="."]
+position = Vector2(403, 598.5)
+scale = Vector2(16.8163, 47.1154)
+texture = ExtResource("1_024d2")
+
+[node name="Nome" type="TextEdit" parent="."]
+offset_left = 56.0
+offset_top = 64.0
+offset_right = 510.0
+offset_bottom = 195.0
+placeholder_text = "Nome del cliente"
+
+[node name="Cognome" type="TextEdit" parent="."]
+offset_left = 56.0
+offset_top = 256.0
+offset_right = 510.0
+offset_bottom = 387.0
+placeholder_text = "Cognome del cliente"
+
+[node name="Numero" type="TextEdit" parent="."]
+offset_left = 56.0
+offset_top = 440.0
+offset_right = 510.0
+offset_bottom = 571.0
+placeholder_text = "Numeri di telefono del cliente"
+
+[node name="Email" type="TextEdit" parent="."]
+offset_left = 64.0
+offset_top = 640.0
+offset_right = 518.0
+offset_bottom = 771.0
+placeholder_text = "Email del cliente"
+
+[node name="Soldi" type="TextEdit" parent="."]
+offset_left = 64.0
+offset_top = 832.0
+offset_right = 518.0
+offset_bottom = 963.0
+placeholder_text = "Soldi che incassi (se già stipulati)"
+
+[node name="TextureButton" type="TextureButton" parent="."]
+texture_filter = 1
+offset_left = 177.0
+offset_top = 1007.0
+offset_right = 655.0
+offset_bottom = 1159.0
+texture_normal = ExtResource("2_sspmi")
+texture_pressed = ExtResource("3_l30n5")
+stretch_mode = 0
+
+[node name="home" type="TextureButton" parent="."]
+texture_filter = 1
+offset_left = 691.0
+offset_top = 34.0
+offset_right = 779.0
+offset_bottom = 111.0
+texture_normal = ExtResource("2_sspmi")
+stretch_mode = 0
+
+[connection signal="pressed" from="TextureButton" to="." method="_on_texture_button_pressed"]
+[connection signal="pressed" from="home" to="." method="_on_home_pressed"]

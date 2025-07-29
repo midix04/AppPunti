@@ -1,0 +1,53 @@
+[gd_scene load_steps=9 format=3 uid="uid://b2pnpd57mvs6j"]
+
+[ext_resource type="Texture2D" uid="uid://cp4njus5nmcqj" path="res://sprites/pixil-frame-0 (9).png" id="1_25jcs"]
+[ext_resource type="Script" uid="uid://b25mbdtyfween" path="res://LoadDb.gd" id="1_272bh"]
+[ext_resource type="Script" uid="uid://dwc6yeeo17iyw" path="res://scripts/newUseraddScript.gd" id="2_2018x"]
+[ext_resource type="Texture2D" uid="uid://wixj7w4krbbv" path="res://sprites/btns/addClient.png" id="2_vu1xh"]
+[ext_resource type="Texture2D" uid="uid://cgyl7lave1kxu" path="res://sprites/btns/addClientHover.png" id="3_gveje"]
+[ext_resource type="Texture2D" uid="uid://bdfnhvxl1tw2p" path="res://sprites/btns/list.png" id="4_fyfg1"]
+[ext_resource type="Texture2D" uid="uid://tr37t02vcl37" path="res://sprites/btns/listHover.png" id="5_2dw81"]
+[ext_resource type="Texture2D" uid="uid://ccvvdbjbh51fl" path="res://sprites/pixil-frame-0 (19).png" id="8_5vw27"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_272bh")
+
+[node name="backGround" type="Sprite2D" parent="."]
+position = Vector2(403, 598.5)
+scale = Vector2(16.8163, 47.1154)
+texture = ExtResource("1_25jcs")
+script = ExtResource("2_2018x")
+
+[node name="addClientBtn" type="TextureButton" parent="."]
+texture_filter = 1
+offset_left = 196.0
+offset_top = 407.0
+offset_right = 646.0
+offset_bottom = 549.0
+texture_normal = ExtResource("2_vu1xh")
+texture_pressed = ExtResource("3_gveje")
+stretch_mode = 0
+
+[node name="TextureButton" type="TextureButton" parent="."]
+texture_filter = 1
+offset_left = 193.0
+offset_top = 842.0
+offset_right = 639.0
+offset_bottom = 986.0
+texture_normal = ExtResource("4_fyfg1")
+texture_pressed = ExtResource("5_2dw81")
+stretch_mode = 0
+
+[node name="rapidSearch" type="TextureButton" parent="."]
+texture_filter = 1
+offset_left = 200.0
+offset_top = 614.0
+offset_right = 650.0
+offset_bottom = 756.0
+texture_normal = ExtResource("8_5vw27")
+texture_pressed = ExtResource("3_gveje")
+stretch_mode = 0
+
+[connection signal="pressed" from="addClientBtn" to="backGround" method="_on_add_client_btn_pressed"]
+[connection signal="pressed" from="TextureButton" to="backGround" method="_on_texture_button_pressed"]
+[connection signal="pressed" from="rapidSearch" to="backGround" method="_on_rapid_search_pressed"]
