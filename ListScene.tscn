@@ -1,9 +1,17 @@
-[gd_scene load_steps=5 format=3 uid="uid://b3ranueb5j2tq"]
+[gd_scene load_steps=10 format=3 uid="uid://b3ranueb5j2tq"]
 
 [ext_resource type="Script" uid="uid://0sotft6qnejw" path="res://list_scene.gd" id="1_fq5yc"]
-[ext_resource type="Texture2D" uid="uid://cp4njus5nmcqj" path="res://sprites/pixil-frame-0 (9).png" id="1_i271r"]
-[ext_resource type="Texture2D" uid="uid://ccvvdbjbh51fl" path="res://sprites/pixil-frame-0 (19).png" id="3_14ax6"]
-[ext_resource type="Texture2D" uid="uid://cdylkc8ybfjg7" path="res://sprites/btns/add.png" id="4_8rfo8"]
+[ext_resource type="Texture2D" uid="uid://c7eby4loknd6l" path="res://sprites/pixil-frame-0 (20).png" id="2_0b3yy"]
+[ext_resource type="Texture2D" uid="uid://dpeuporsh48h2" path="res://sprites/btns/pixil-frame-0 (21).png" id="3_cyxxw"]
+[ext_resource type="FontFile" uid="uid://gnmln1bq2pfl" path="res://fonts/Orbitron-Regular.ttf" id="4_aa3d8"]
+[ext_resource type="Texture2D" uid="uid://hl2r1gt2cl1h" path="res://sprites/btns/pixil-frame-0 (22).png" id="5_0b3yy"]
+[ext_resource type="Texture2D" uid="uid://cim1vs5fogdeg" path="res://sprites/btns/arrow-right-thick.svg" id="6_8o642"]
+[ext_resource type="Texture2D" uid="uid://dmbgc3kyfv3v" path="res://sprites/btns/home.svg" id="6_cyxxw"]
+[ext_resource type="Texture2D" uid="uid://dkribhoybe5mg" path="res://sprites/btns/arrow-left-thick.svg" id="7_npve6"]
+
+[sub_resource type="Theme" id="Theme_8o642"]
+default_font = ExtResource("4_aa3d8")
+default_font_size = 40
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_fq5yc")
@@ -11,83 +19,113 @@ script = ExtResource("1_fq5yc")
 [node name="backGround" type="Sprite2D" parent="."]
 position = Vector2(403, 598.5)
 scale = Vector2(16.8163, 47.1154)
-texture = ExtResource("1_i271r")
+texture = ExtResource("2_0b3yy")
 
 [node name="client" type="Sprite2D" parent="."]
 texture_filter = 1
-position = Vector2(411, 219)
+position = Vector2(411.5, 178)
 scale = Vector2(10.74, 5.30769)
-texture = ExtResource("3_14ax6")
+texture = ExtResource("3_cyxxw")
 
 [node name="client2" type="Sprite2D" parent="."]
 texture_filter = 1
-position = Vector2(410, 413)
+position = Vector2(410.5, 372)
 scale = Vector2(10.74, 5.30769)
-texture = ExtResource("3_14ax6")
+texture = ExtResource("3_cyxxw")
 
 [node name="client3" type="Sprite2D" parent="."]
 texture_filter = 1
-position = Vector2(413, 603)
+position = Vector2(413.5, 562)
 scale = Vector2(10.74, 5.30769)
-texture = ExtResource("3_14ax6")
+texture = ExtResource("3_cyxxw")
 
 [node name="client4" type="Sprite2D" parent="."]
 texture_filter = 1
-position = Vector2(417, 783)
+position = Vector2(417.5, 742)
 scale = Vector2(10.74, 5.30769)
-texture = ExtResource("3_14ax6")
+texture = ExtResource("3_cyxxw")
 
 [node name="client5" type="Sprite2D" parent="."]
 texture_filter = 1
-position = Vector2(424, 978)
+position = Vector2(424.5, 937)
 scale = Vector2(10.74, 5.30769)
-texture = ExtResource("3_14ax6")
+texture = ExtResource("3_cyxxw")
 
 [node name="nome1" type="RichTextLabel" parent="."]
-offset_left = 153.0
-offset_top = 155.0
-offset_right = 675.0
-offset_bottom = 288.0
+offset_left = 153.5
+offset_top = 114.0
+offset_right = 675.5
+offset_bottom = 247.0
+theme = SubResource("Theme_8o642")
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="nome2" type="RichTextLabel" parent="."]
-offset_left = 152.0
-offset_top = 349.0
-offset_right = 667.0
-offset_bottom = 473.0
+offset_left = 152.5
+offset_top = 308.0
+offset_right = 667.5
+offset_bottom = 432.0
+theme = SubResource("Theme_8o642")
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="nome3" type="RichTextLabel" parent="."]
-offset_left = 155.0
-offset_top = 539.0
-offset_right = 670.0
-offset_bottom = 674.0
+offset_left = 155.5
+offset_top = 498.0
+offset_right = 670.5
+offset_bottom = 633.0
+theme = SubResource("Theme_8o642")
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="nome4" type="RichTextLabel" parent="."]
-offset_left = 159.0
-offset_top = 719.0
-offset_right = 680.0
-offset_bottom = 846.0
+offset_left = 159.5
+offset_top = 678.0
+offset_right = 680.5
+offset_bottom = 805.0
+theme = SubResource("Theme_8o642")
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="nome5" type="RichTextLabel" parent="."]
-offset_left = 166.0
-offset_top = 914.0
-offset_right = 687.0
-offset_bottom = 1045.0
+offset_left = 166.5
+offset_top = 873.0
+offset_right = 687.5
+offset_bottom = 1004.0
+theme = SubResource("Theme_8o642")
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="next" type="TextureButton" parent="."]
-offset_left = 570.0
-offset_top = 1084.0
-offset_right = 772.0
-offset_bottom = 1188.0
-texture_normal = ExtResource("4_8rfo8")
+texture_filter = 1
+offset_left = 601.0
+offset_top = 1089.0
+offset_right = 695.0
+offset_bottom = 1180.0
+texture_normal = ExtResource("3_cyxxw")
+texture_pressed = ExtResource("5_0b3yy")
 stretch_mode = 0
 
+[node name="Arrow-right-bold" type="Sprite2D" parent="next"]
+position = Vector2(56, 48)
+scale = Vector2(5, 4)
+texture = ExtResource("6_8o642")
+
 [node name="prev" type="TextureButton" parent="."]
-offset_left = 80.0
-offset_top = 1089.0
+texture_filter = 1
+offset_left = 153.0
+offset_top = 1087.0
 offset_right = 254.0
-offset_bottom = 1184.0
-texture_normal = ExtResource("4_8rfo8")
+offset_bottom = 1182.0
+texture_normal = ExtResource("3_cyxxw")
+texture_pressed = ExtResource("5_0b3yy")
 stretch_mode = 0
+
+[node name="Arrow-left-thick" type="Sprite2D" parent="prev"]
+texture_filter = 1
+position = Vector2(46.5, 49)
+scale = Vector2(5.29167, 4)
+texture = ExtResource("7_npve6")
 
 [node name="1" type="TextureButton" parent="."]
 offset_left = 153.0
@@ -121,12 +159,18 @@ offset_bottom = 1043.0
 
 [node name="home" type="TextureButton" parent="."]
 texture_filter = 1
-offset_left = 707.0
+offset_left = 710.0
 offset_top = 8.0
-offset_right = 779.0
+offset_right = 782.0
 offset_bottom = 80.0
-texture_normal = ExtResource("4_8rfo8")
+texture_normal = ExtResource("3_cyxxw")
+texture_pressed = ExtResource("5_0b3yy")
 stretch_mode = 0
+
+[node name="Home" type="Sprite2D" parent="home"]
+position = Vector2(37, 35)
+scale = Vector2(2.58333, 2.25)
+texture = ExtResource("6_cyxxw")
 
 [connection signal="pressed" from="next" to="." method="_on_next_pressed"]
 [connection signal="pressed" from="prev" to="." method="_on_prev_pressed"]

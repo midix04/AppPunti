@@ -1,13 +1,16 @@
 [gd_scene load_steps=9 format=3 uid="uid://b2pnpd57mvs6j"]
 
-[ext_resource type="Texture2D" uid="uid://cp4njus5nmcqj" path="res://sprites/pixil-frame-0 (9).png" id="1_25jcs"]
 [ext_resource type="Script" uid="uid://b25mbdtyfween" path="res://LoadDb.gd" id="1_272bh"]
 [ext_resource type="Script" uid="uid://dwc6yeeo17iyw" path="res://scripts/newUseraddScript.gd" id="2_2018x"]
-[ext_resource type="Texture2D" uid="uid://wixj7w4krbbv" path="res://sprites/btns/addClient.png" id="2_vu1xh"]
-[ext_resource type="Texture2D" uid="uid://cgyl7lave1kxu" path="res://sprites/btns/addClientHover.png" id="3_gveje"]
-[ext_resource type="Texture2D" uid="uid://bdfnhvxl1tw2p" path="res://sprites/btns/list.png" id="4_fyfg1"]
-[ext_resource type="Texture2D" uid="uid://tr37t02vcl37" path="res://sprites/btns/listHover.png" id="5_2dw81"]
-[ext_resource type="Texture2D" uid="uid://ccvvdbjbh51fl" path="res://sprites/pixil-frame-0 (19).png" id="8_5vw27"]
+[ext_resource type="Texture2D" uid="uid://c7eby4loknd6l" path="res://sprites/pixil-frame-0 (20).png" id="2_lquwl"]
+[ext_resource type="Texture2D" uid="uid://dpeuporsh48h2" path="res://sprites/btns/pixil-frame-0 (21).png" id="4_7mycd"]
+[ext_resource type="Texture2D" uid="uid://dtbp301uvvqi6" path="res://sprites/btns/1474d85a-4344-410b-8666-5ff57da62ba7.jpeg" id="4_272bh"]
+[ext_resource type="Texture2D" uid="uid://hl2r1gt2cl1h" path="res://sprites/btns/pixil-frame-0 (22).png" id="5_272bh"]
+[ext_resource type="FontFile" uid="uid://gnmln1bq2pfl" path="res://fonts/Orbitron-Regular.ttf" id="7_272bh"]
+
+[sub_resource type="Theme" id="Theme_5vw27"]
+default_font = ExtResource("7_272bh")
+default_font_size = 70
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_272bh")
@@ -15,8 +18,13 @@ script = ExtResource("1_272bh")
 [node name="backGround" type="Sprite2D" parent="."]
 position = Vector2(403, 598.5)
 scale = Vector2(16.8163, 47.1154)
-texture = ExtResource("1_25jcs")
+texture = ExtResource("2_lquwl")
 script = ExtResource("2_2018x")
+
+[node name="logo" type="Sprite2D" parent="."]
+position = Vector2(414, 230)
+scale = Vector2(0.3385, 0.316)
+texture = ExtResource("4_272bh")
 
 [node name="addClientBtn" type="TextureButton" parent="."]
 texture_filter = 1
@@ -24,9 +32,25 @@ offset_left = 196.0
 offset_top = 407.0
 offset_right = 646.0
 offset_bottom = 549.0
-texture_normal = ExtResource("2_vu1xh")
-texture_pressed = ExtResource("3_gveje")
+texture_normal = ExtResource("4_7mycd")
+texture_pressed = ExtResource("5_272bh")
 stretch_mode = 0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="addClientBtn" node_paths=PackedStringArray("shortcut_context")]
+light_mask = 0
+offset_left = 1.0
+offset_top = 2.0
+offset_right = 447.0
+offset_bottom = 141.0
+mouse_filter = 2
+shortcut_context = NodePath("..")
+theme = SubResource("Theme_5vw27")
+bbcode_enabled = true
+text = "[color=black]Add client[/color]"
+scroll_active = false
+shortcut_keys_enabled = false
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="TextureButton" type="TextureButton" parent="."]
 texture_filter = 1
@@ -34,9 +58,21 @@ offset_left = 193.0
 offset_top = 842.0
 offset_right = 639.0
 offset_bottom = 986.0
-texture_normal = ExtResource("4_fyfg1")
-texture_pressed = ExtResource("5_2dw81")
+texture_normal = ExtResource("4_7mycd")
+texture_pressed = ExtResource("5_272bh")
 stretch_mode = 0
+
+[node name="RichTextLabel3" type="RichTextLabel" parent="TextureButton"]
+offset_left = 2.0
+offset_top = -1.0
+offset_right = 447.0
+offset_bottom = 145.0
+mouse_filter = 2
+theme = SubResource("Theme_5vw27")
+bbcode_enabled = true
+text = "[color=black]List[/color]"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="rapidSearch" type="TextureButton" parent="."]
 texture_filter = 1
@@ -44,9 +80,26 @@ offset_left = 200.0
 offset_top = 614.0
 offset_right = 650.0
 offset_bottom = 756.0
-texture_normal = ExtResource("8_5vw27")
-texture_pressed = ExtResource("3_gveje")
+texture_normal = ExtResource("4_7mycd")
+texture_pressed = ExtResource("5_272bh")
 stretch_mode = 0
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="rapidSearch"]
+offset_left = 1.0
+offset_top = -1.0
+offset_right = 450.0
+offset_bottom = 142.0
+mouse_filter = 2
+theme = SubResource("Theme_5vw27")
+bbcode_enabled = true
+text = "[color=black]Search[/color]"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Pixil-frame-0(20)" type="Sprite2D" parent="."]
+position = Vector2(92, 270)
+scale = Vector2(1, 26.7692)
+texture = ExtResource("2_lquwl")
 
 [connection signal="pressed" from="addClientBtn" to="backGround" method="_on_add_client_btn_pressed"]
 [connection signal="pressed" from="TextureButton" to="backGround" method="_on_texture_button_pressed"]

@@ -1,10 +1,16 @@
-[gd_scene load_steps=6 format=3 uid="uid://beltq7kglsd6h"]
+[gd_scene load_steps=9 format=3 uid="uid://beltq7kglsd6h"]
 
-[ext_resource type="Texture2D" uid="uid://cp4njus5nmcqj" path="res://sprites/pixil-frame-0 (9).png" id="1_okyt2"]
 [ext_resource type="Script" uid="uid://8dpdmjep43oc" path="res://detailed_client.gd" id="1_p8u6h"]
-[ext_resource type="Texture2D" uid="uid://ccvvdbjbh51fl" path="res://sprites/pixil-frame-0 (19).png" id="3_361ku"]
-[ext_resource type="Texture2D" uid="uid://cdylkc8ybfjg7" path="res://sprites/btns/add.png" id="4_s2pcs"]
-[ext_resource type="Texture2D" uid="uid://dd1i76ftq734u" path="res://sprites/btns/addHover.png" id="5_i6clr"]
+[ext_resource type="Texture2D" uid="uid://c7eby4loknd6l" path="res://sprites/pixil-frame-0 (20).png" id="2_xjeii"]
+[ext_resource type="Texture2D" uid="uid://dpeuporsh48h2" path="res://sprites/btns/pixil-frame-0 (21).png" id="3_7mcvt"]
+[ext_resource type="FontFile" uid="uid://gnmln1bq2pfl" path="res://fonts/Orbitron-Regular.ttf" id="4_0pahs"]
+[ext_resource type="Texture2D" uid="uid://hl2r1gt2cl1h" path="res://sprites/btns/pixil-frame-0 (22).png" id="5_xjeii"]
+[ext_resource type="Texture2D" uid="uid://dkribhoybe5mg" path="res://sprites/btns/arrow-left-thick.svg" id="6_7mcvt"]
+[ext_resource type="Texture2D" uid="uid://cisdgs685wgwb" path="res://sprites/btns/delete-alert-outline.svg" id="7_0pahs"]
+
+[sub_resource type="Theme" id="Theme_abd17"]
+default_font = ExtResource("4_0pahs")
+default_font_size = 40
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_p8u6h")
@@ -12,90 +18,112 @@ script = ExtResource("1_p8u6h")
 [node name="backGround" type="Sprite2D" parent="."]
 position = Vector2(403, 598.5)
 scale = Vector2(16.8163, 47.1154)
-texture = ExtResource("1_okyt2")
+texture = ExtResource("2_xjeii")
 
 [node name="nomeCognome" type="Sprite2D" parent="."]
 texture_filter = 1
 position = Vector2(388, 153)
 scale = Vector2(10.74, 5.30769)
-texture = ExtResource("3_361ku")
+texture = ExtResource("3_7mcvt")
 
 [node name="client2" type="Sprite2D" parent="."]
 texture_filter = 1
 position = Vector2(388, 301)
 scale = Vector2(10.74, 5.30769)
-texture = ExtResource("3_361ku")
+texture = ExtResource("3_7mcvt")
 
 [node name="client3" type="Sprite2D" parent="."]
 texture_filter = 1
 position = Vector2(390, 454)
 scale = Vector2(10.74, 5.30769)
-texture = ExtResource("3_361ku")
+texture = ExtResource("3_7mcvt")
 
 [node name="client4" type="Sprite2D" parent="."]
 texture_filter = 1
 position = Vector2(394, 611)
 scale = Vector2(10.74, 5.30769)
-texture = ExtResource("3_361ku")
+texture = ExtResource("3_7mcvt")
 
 [node name="client5" type="Sprite2D" parent="."]
 texture_filter = 1
 position = Vector2(325.75, 792)
 scale = Vector2(7.61, 5.30769)
-texture = ExtResource("3_361ku")
+texture = ExtResource("3_7mcvt")
 
 [node name="email" type="TextEdit" parent="."]
-offset_left = 129.0
-offset_top = 233.0
-offset_right = 651.0
-offset_bottom = 366.0
-placeholder_text = "Email del cliente"
+offset_left = 118.0
+offset_top = 231.0
+offset_right = 657.0
+offset_bottom = 372.0
+theme = SubResource("Theme_abd17")
+placeholder_text = "email"
 
 [node name="numero" type="TextEdit" parent="."]
-offset_left = 130.0
-offset_top = 387.0
-offset_right = 652.0
-offset_bottom = 520.0
-placeholder_text = "Numero di telefono"
+offset_left = 120.0
+offset_top = 380.0
+offset_right = 661.0
+offset_bottom = 524.0
+theme = SubResource("Theme_abd17")
+placeholder_text = "Tel. number
+"
 
 [node name="soldi" type="TextEdit" parent="."]
-offset_left = 135.0
+offset_left = 124.0
 offset_top = 541.0
-offset_right = 657.0
-offset_bottom = 674.0
-placeholder_text = "Soldi spesi dal cliente"
+offset_right = 662.0
+offset_bottom = 681.0
+theme = SubResource("Theme_abd17")
+placeholder_text = "money
+"
 
 [node name="punti" type="TextEdit" parent="."]
-offset_left = 140.0
-offset_top = 726.0
-offset_right = 513.0
-offset_bottom = 859.0
-placeholder_text = "Punti del cliente"
+offset_left = 134.0
+offset_top = 720.0
+offset_right = 518.0
+offset_bottom = 862.0
+theme = SubResource("Theme_abd17")
+placeholder_text = "points
+"
 
 [node name="nomeCognome2" type="TextEdit" parent="."]
-offset_left = 128.0
-offset_top = 90.0
-offset_right = 650.0
+offset_left = 119.0
+offset_top = 82.0
+offset_right = 658.0
 offset_bottom = 223.0
-text = "Nome e cognome del cliente"
+theme = SubResource("Theme_abd17")
+placeholder_text = "name & surname"
 
 [node name="list" type="TextureButton" parent="."]
 texture_filter = 1
-offset_left = 89.0
-offset_top = 989.0
-offset_right = 300.0
-offset_bottom = 1106.0
-texture_normal = ExtResource("4_s2pcs")
-texture_pressed = ExtResource("5_i6clr")
+offset_left = 136.0
+offset_top = 968.0
+offset_right = 347.0
+offset_bottom = 1085.0
+texture_normal = ExtResource("3_7mcvt")
+texture_pressed = ExtResource("5_xjeii")
 stretch_mode = 0
 
+[node name="Arrow-left-thick" type="Sprite2D" parent="list"]
+texture_filter = 1
+position = Vector2(109.5, 63.5)
+scale = Vector2(8.04167, 4.45833)
+texture = ExtResource("6_7mcvt")
+
 [node name="deleteBtn" type="TextureButton" parent="."]
-offset_left = 589.0
-offset_top = 975.0
-offset_right = 728.0
-offset_bottom = 1102.0
-texture_normal = ExtResource("3_361ku")
+texture_filter = 1
+offset_left = 624.0
+offset_top = 960.0
+offset_right = 763.0
+offset_bottom = 1087.0
+texture_normal = ExtResource("3_7mcvt")
+texture_pressed = ExtResource("5_xjeii")
 stretch_mode = 0
+
+[node name="Delete-alert-outline" type="Sprite2D" parent="deleteBtn"]
+texture_filter = 1
+position = Vector2(79, 62)
+scale = Vector2(4.91667, 4.20833)
+texture = ExtResource("7_0pahs")
 
 [connection signal="pressed" from="list" to="." method="_on_list_pressed"]
 [connection signal="pressed" from="deleteBtn" to="." method="_on_delete_btn_pressed"]

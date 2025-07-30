@@ -18,7 +18,7 @@ func _ready() -> void:
 			get_node("nomeCognome2").text = utente["name"] + " " + utente["cognome"]
 			get_node("email").text = utente["email"] 
 			get_node("numero").text = str(utente["numTelefono"])
-			get_node("soldi").text =  str(utente["soldiSpesi"])
+			get_node("soldi").text = str(utente["soldiSpesi"])
 			get_node("punti").text = str(utente["punti"])
 			break
 
@@ -51,7 +51,6 @@ func _exit_tree():
 
 func updateData(data):
 	database.update_rows("clients", "id='"+str(Global.selected_client_id)+"'", {"name":data[0], "cognome":data[1], "email":data[2], "numTelefono":data[3],"soldiSpesi":data[4],"punti":data[5]})
-	print(data)
 func _on_list_pressed() -> void:
 	get_tree().change_scene_to_file("res://ListScene.tscn")
 

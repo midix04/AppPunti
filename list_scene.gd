@@ -31,11 +31,13 @@ func mostra_utenti():
 		if index < utenti.size():
 			arr[i].text = (
 				"[font_size=40]"
+				+"[color=black]"
 				+ str(utenti[index]["id"])
 				+ " "
 				+ utenti[index]["name"]
 				+ " "
 				+ utenti[index]["cognome"]
+				+"[/color]"
 				+ "[/font_size]"
 			)
 		else:
