@@ -26,10 +26,18 @@ func _process(delta: float) -> void:
 	pass
 
 func _exit_tree():
-	var nomeCognome = get_node("nomeCognome2").text
-	var parts = nomeCognome.split(" ")
-	var nome = parts[0]
-	var cognome = parts[1]
+	var input_text = get_node("nomeCognome2").text.strip_edges()
+	var parts = input_text.split(" ", false)
+	var nome := "*"
+	var cognome := "*"
+	match parts.size():
+		0:
+			pass  # lascia * e *
+		1:
+			nome = parts[0]
+		_:
+			nome = parts[0]
+			cognome = parts[1]
 	var id = Global.selected_client_id
 	var soldi = get_node("soldi").text
 	var numeroTel = get_node("numero").text

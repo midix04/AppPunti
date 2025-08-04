@@ -55,7 +55,7 @@ func _on_texture_button_pressed() -> void:
 		
 		for i in database.query_result:
 			Global.selected_client_id = (i["id"])
-		get_tree().change_scene_to_file("res://detailedClient.tscn")
+		#get_tree().change_scene_to_file("res://detailedClient.tscn")
 	
 
 
