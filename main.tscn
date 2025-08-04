@@ -4,7 +4,7 @@
 [ext_resource type="Script" uid="uid://dwc6yeeo17iyw" path="res://scripts/newUseraddScript.gd" id="2_2018x"]
 [ext_resource type="Texture2D" uid="uid://c7eby4loknd6l" path="res://sprites/pixil-frame-0 (20).png" id="2_lquwl"]
 [ext_resource type="Texture2D" uid="uid://dpeuporsh48h2" path="res://sprites/btns/pixil-frame-0 (21).png" id="4_7mycd"]
-[ext_resource type="Texture2D" uid="uid://dtbp301uvvqi6" path="res://sprites/btns/1474d85a-4344-410b-8666-5ff57da62ba7.jpeg" id="4_272bh"]
+[ext_resource type="Texture2D" uid="uid://dtbp301uvvqi6" path="res://sprites/logoNajiko.jpeg" id="4_272bh"]
 [ext_resource type="Texture2D" uid="uid://hl2r1gt2cl1h" path="res://sprites/btns/pixil-frame-0 (22).png" id="5_272bh"]
 [ext_resource type="FontFile" uid="uid://gnmln1bq2pfl" path="res://fonts/Orbitron-Regular.ttf" id="7_272bh"]
 
@@ -29,15 +29,16 @@ texture = ExtResource("4_272bh")
 [node name="addClientBtn" type="TextureButton" parent="."]
 texture_filter = 1
 offset_left = 196.0
-offset_top = 407.0
+offset_top = 433.0
 offset_right = 646.0
-offset_bottom = 549.0
+offset_bottom = 575.0
 texture_normal = ExtResource("4_7mycd")
 texture_pressed = ExtResource("5_272bh")
 stretch_mode = 0
 
 [node name="RichTextLabel" type="RichTextLabel" parent="addClientBtn" node_paths=PackedStringArray("shortcut_context")]
 light_mask = 0
+layout_mode = 0
 offset_left = 1.0
 offset_top = 2.0
 offset_right = 447.0
@@ -54,15 +55,16 @@ vertical_alignment = 1
 
 [node name="TextureButton" type="TextureButton" parent="."]
 texture_filter = 1
-offset_left = 193.0
-offset_top = 842.0
-offset_right = 639.0
-offset_bottom = 986.0
+offset_left = 196.0
+offset_top = 847.0
+offset_right = 642.0
+offset_bottom = 991.0
 texture_normal = ExtResource("4_7mycd")
 texture_pressed = ExtResource("5_272bh")
 stretch_mode = 0
 
 [node name="RichTextLabel3" type="RichTextLabel" parent="TextureButton"]
+layout_mode = 0
 offset_left = 2.0
 offset_top = -1.0
 offset_right = 447.0
@@ -76,15 +78,16 @@ vertical_alignment = 1
 
 [node name="rapidSearch" type="TextureButton" parent="."]
 texture_filter = 1
-offset_left = 200.0
-offset_top = 614.0
-offset_right = 650.0
-offset_bottom = 756.0
+offset_left = 196.0
+offset_top = 640.0
+offset_right = 646.0
+offset_bottom = 782.0
 texture_normal = ExtResource("4_7mycd")
 texture_pressed = ExtResource("5_272bh")
 stretch_mode = 0
 
 [node name="RichTextLabel2" type="RichTextLabel" parent="rapidSearch"]
+layout_mode = 0
 offset_left = 1.0
 offset_top = -1.0
 offset_right = 450.0

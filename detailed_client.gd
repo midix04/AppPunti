@@ -54,9 +54,14 @@ func updateData(data):
 func _on_list_pressed() -> void:
 	get_tree().change_scene_to_file("res://ListScene.tscn")
 
-
+var flag = 0
 func _on_delete_btn_pressed() -> void:
-	var id = Global.selected_client_id
-	database.delete_rows("clients", "id= '" + id + "'")
-	get_tree().change_scene_to_file("res://main.tscn")
+	flag += 1
+	var delete_btn = get_node("deleteBtn")
+	var texture = preload("res://sprites/red.png")
+	delete_btn.texture_normal = texture
+	if flag >=2:
+		var id = Global.selected_client_id
+		database.delete_rows("clients", "id= '" + id + "'")
+		get_tree().change_scene_to_file("res://main.tscn")
 	pass

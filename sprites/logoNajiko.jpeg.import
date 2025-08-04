@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dtbp301uvvqi6"
-path="res://.godot/imported/1474d85a-4344-410b-8666-5ff57da62ba7.jpeg-7080da93580ad81e11c91e50c3e408c4.ctex"
+path="res://.godot/imported/logoNajiko.jpeg-123a3770000c3c12217825fa25d32097.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/btns/1474d85a-4344-410b-8666-5ff57da62ba7.jpeg"
-dest_files=["res://.godot/imported/1474d85a-4344-410b-8666-5ff57da62ba7.jpeg-7080da93580ad81e11c91e50c3e408c4.ctex"]
+source_file="res://sprites/logoNajiko.jpeg"
+dest_files=["res://.godot/imported/logoNajiko.jpeg-123a3770000c3c12217825fa25d32097.ctex"]
 
 [params]
 

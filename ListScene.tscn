@@ -14,10 +14,11 @@ default_font = ExtResource("4_aa3d8")
 default_font_size = 40
 
 [node name="Node2D" type="Node2D"]
+position = Vector2(0, 9)
 script = ExtResource("1_fq5yc")
 
 [node name="backGround" type="Sprite2D" parent="."]
-position = Vector2(403, 598.5)
+position = Vector2(402, 599.5)
 scale = Vector2(16.8163, 47.1154)
 texture = ExtResource("2_0b3yy")
 
@@ -29,25 +30,25 @@ texture = ExtResource("3_cyxxw")
 
 [node name="client2" type="Sprite2D" parent="."]
 texture_filter = 1
-position = Vector2(410.5, 372)
+position = Vector2(410.5, 381)
 scale = Vector2(10.74, 5.30769)
 texture = ExtResource("3_cyxxw")
 
 [node name="client3" type="Sprite2D" parent="."]
 texture_filter = 1
-position = Vector2(413.5, 562)
+position = Vector2(410.5, 573)
 scale = Vector2(10.74, 5.30769)
 texture = ExtResource("3_cyxxw")
 
 [node name="client4" type="Sprite2D" parent="."]
 texture_filter = 1
-position = Vector2(417.5, 742)
+position = Vector2(410.5, 764.001)
 scale = Vector2(10.74, 5.30769)
 texture = ExtResource("3_cyxxw")
 
 [node name="client5" type="Sprite2D" parent="."]
 texture_filter = 1
-position = Vector2(424.5, 937)
+position = Vector2(410.5, 956)
 scale = Vector2(10.74, 5.30769)
 texture = ExtResource("3_cyxxw")
 
@@ -59,49 +60,50 @@ offset_bottom = 247.0
 theme = SubResource("Theme_8o642")
 horizontal_alignment = 1
 vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
 
 [node name="nome2" type="RichTextLabel" parent="."]
 offset_left = 152.5
-offset_top = 308.0
+offset_top = 320.0
 offset_right = 667.5
-offset_bottom = 432.0
+offset_bottom = 444.0
 theme = SubResource("Theme_8o642")
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="nome3" type="RichTextLabel" parent="."]
-offset_left = 155.5
-offset_top = 498.0
-offset_right = 670.5
-offset_bottom = 633.0
+offset_left = 152.5
+offset_top = 509.0
+offset_right = 667.5
+offset_bottom = 644.0
 theme = SubResource("Theme_8o642")
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="nome4" type="RichTextLabel" parent="."]
-offset_left = 159.5
-offset_top = 678.0
-offset_right = 680.5
-offset_bottom = 805.0
+offset_left = 152.5
+offset_top = 700.0
+offset_right = 673.5
+offset_bottom = 827.0
 theme = SubResource("Theme_8o642")
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="nome5" type="RichTextLabel" parent="."]
-offset_left = 166.5
-offset_top = 873.0
-offset_right = 687.5
-offset_bottom = 1004.0
+offset_left = 152.5
+offset_top = 892.0
+offset_right = 673.5
+offset_bottom = 1023.0
 theme = SubResource("Theme_8o642")
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="next" type="TextureButton" parent="."]
 texture_filter = 1
-offset_left = 601.0
-offset_top = 1089.0
-offset_right = 695.0
-offset_bottom = 1180.0
+offset_left = 586.0
+offset_top = 1068.0
+offset_right = 680.0
+offset_bottom = 1159.0
 texture_normal = ExtResource("3_cyxxw")
 texture_pressed = ExtResource("5_0b3yy")
 stretch_mode = 0
@@ -113,10 +115,10 @@ texture = ExtResource("6_8o642")
 
 [node name="prev" type="TextureButton" parent="."]
 texture_filter = 1
-offset_left = 153.0
-offset_top = 1087.0
-offset_right = 254.0
-offset_bottom = 1182.0
+offset_left = 142.0
+offset_top = 1068.0
+offset_right = 236.0
+offset_bottom = 1159.0
 texture_normal = ExtResource("3_cyxxw")
 texture_pressed = ExtResource("5_0b3yy")
 stretch_mode = 0
@@ -128,34 +130,34 @@ scale = Vector2(5.29167, 4)
 texture = ExtResource("7_npve6")
 
 [node name="1" type="TextureButton" parent="."]
-offset_left = 153.0
-offset_top = 155.0
-offset_right = 669.0
-offset_bottom = 282.0
+offset_left = 152.0
+offset_top = 115.0
+offset_right = 668.0
+offset_bottom = 242.0
 
 [node name="2" type="TextureButton" parent="."]
 offset_left = 152.0
-offset_top = 349.0
+offset_top = 317.0
 offset_right = 675.0
-offset_bottom = 484.0
+offset_bottom = 452.0
 
 [node name="3" type="TextureButton" parent="."]
-offset_left = 155.0
-offset_top = 534.0
-offset_right = 674.0
-offset_bottom = 670.0
+offset_left = 152.0
+offset_top = 509.0
+offset_right = 671.0
+offset_bottom = 645.0
 
 [node name="4" type="TextureButton" parent="."]
-offset_left = 159.0
-offset_top = 714.0
-offset_right = 675.0
-offset_bottom = 852.0
+offset_left = 152.0
+offset_top = 700.0
+offset_right = 668.0
+offset_bottom = 838.0
 
 [node name="5" type="TextureButton" parent="."]
-offset_left = 166.0
-offset_top = 909.0
-offset_right = 687.0
-offset_bottom = 1043.0
+offset_left = 152.0
+offset_top = 890.0
+offset_right = 673.0
+offset_bottom = 1024.0
 
 [node name="home" type="TextureButton" parent="."]
 texture_filter = 1

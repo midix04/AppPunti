@@ -16,12 +16,12 @@ func _on_texture_button_pressed() -> void:
 	if nome.length() > 0:
 		nome = nome[0].to_upper() + nome.substr(1,-1)
 	else:
-		get_node("Nome").placeholder_text = "Nome!"
+		get_node("Nome").placeholder_text = "Name!"
 		flag = true
 	if cognome.length() > 0:
 		cognome = cognome[0].to_upper() + cognome.substr(1,-1)
 	else:
-		get_node("Cognome").placeholder_text = "Cognome!"
+		get_node("Cognome").placeholder_text = "Surname!"
 		flag = true
 	if numero.is_valid_int():  
 		var numero2 = numero.to_int()
