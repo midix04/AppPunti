@@ -16,12 +16,12 @@ func _on_texture_button_pressed() -> void:
 	if nome.length() > 0:
 		nome = nome[0].to_upper() + nome.substr(1,-1)
 	else:
-		get_node("Nome").placeholder_text = "Name!"
+		get_node("Nome").placeholder_text = "Nome!"
 		flag = true
 	if cognome.length() > 0:
 		cognome = cognome[0].to_upper() + cognome.substr(1,-1)
 	else:
-		get_node("Cognome").placeholder_text = "Surname!"
+		get_node("Cognome").placeholder_text = "Cognome!"
 		flag = true
 	if numero.is_valid_int():  
 		var numero2 = numero.to_int()
@@ -32,8 +32,8 @@ func _on_texture_button_pressed() -> void:
 			flag = true
 		else:
 			numero = "1234123123"
-	if soldi.is_valid_int():  
-		var soldi2 = soldi.to_int()
+	if soldi.is_valid_float():  
+		var soldi2 = soldi.to_float()
 	else:
 		if soldi.length()>0:
 			get_node("Soldi").text = ""
@@ -41,6 +41,9 @@ func _on_texture_button_pressed() -> void:
 			flag = true
 		else:
 			soldi = "0"
+	
+	#I punti sono uguali ai soldi ma per difetto 29,99 sono 29 punti
+	punti = int(soldi)
 	if flag == false:
 		var data = {
 			"name" : nome,
@@ -48,14 +51,14 @@ func _on_texture_button_pressed() -> void:
 			"email": email,
 			"numTelefono": numero,
 			"soldiSpesi": soldi,
-			"punti": soldi
+			"punti": punti
 		}
 		database.insert_row("clients", data)
 		database.query("SELECT id FROM clients ORDER BY id DESC LIMIT 1")
 		
 		for i in database.query_result:
 			Global.selected_client_id = (i["id"])
-		#get_tree().change_scene_to_file("res://detailedClient.tscn")
+		get_tree().change_scene_to_file("res://detailedClient.tscn")
 	
 
 

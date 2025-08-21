@@ -25,7 +25,8 @@ func mostra_utenti():
 	var query = ""
 	if Global.nomeSearch != "":
 		query = "name LIKE '" +  Global.nomeSearch + "%'"
-	var utenti = database.select_rows("clients",query,["id","name","cognome"])
+	database.query("SELECT name, cognome, id FROM clients ORDER BY soldiSpesi DESC")
+	var utenti = database.query_result
 	for i in range(5):
 		var index = indice + i
 		if index < utenti.size():
@@ -51,7 +52,10 @@ func detailClient(id: String):
 
 
 func _on_next_pressed() -> void:
-	var utenti = database.select_rows("clients","",["id","name","cognome"])
+	#var utenti = database.select_rows("clients","",["id","name","cognome"])
+	database.query("SELECT name, cognome, soldiSpesi FROM clients ORDER BY soldiSpesi DESC")
+	var utenti = database.query_result
+	print(utenti)
 	if indice + 5 < utenti.size():
 		indice += 5
 		mostra_utenti()
