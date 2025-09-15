@@ -19,7 +19,8 @@ func _on_texture_button_pressed() -> void:
 		cognome = cognome[0].to_upper() + cognome.substr(1,-1)
 		var query = "name = '" + nome + "' AND cognome = '" + cognome + "'"
 		var utenti = database.select_rows("clients",query,["id"])
-		
+		print("AAAAAAAAAAAAAAAA",nome, " ", cognome)
+		print(utenti)
 		if utenti.size() == 1:
 			Global.selected_client_id = utenti[0]["id"]
 			get_tree().change_scene_to_file("res://detailedClient.tscn")

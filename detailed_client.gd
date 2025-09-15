@@ -22,8 +22,15 @@ func _ready() -> void:
 			get_node("punti").text = str(utente["punti"])
 			break
 
-func _process(delta: float) -> void:
-	pass
+func capitalize_if_letters(text):
+	if text == "*":
+		return text
+	if text.is_valid_identifier(): # controlla solo lettere e underscore
+		return text.capitalize()
+	elif text.is_ascii() and text.is_valid_float() == false and text.is_valid_integer() == false:
+		if text.is_valid_integer() == false and text.is_valid_float() == false:
+			return text.capitalize()
+	return text  # se contiene numeri o simboli, non modificare
 
 func _exit_tree():
 	var input_text = get_node("nomeCognome2").text.strip_edges()
@@ -43,6 +50,8 @@ func _exit_tree():
 	var numeroTel = get_node("numero").text
 	var punti = get_node("punti").text
 	var email = get_node("email").text
+	nome = capitalize_if_letters(nome)
+	cognome = capitalize_if_letters(cognome)
 	var newData = [nome, cognome,email,numeroTel,soldi,punti]
 	var oldData = data[0]  
 	var oldValues = [

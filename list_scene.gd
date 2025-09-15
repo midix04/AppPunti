@@ -22,10 +22,11 @@ func _ready():
 func _exit_tree():
 	Global.nomeSearch = ""
 func mostra_utenti():
-	var query = ""
+	var query = "SELECT name, cognome, id FROM clients ORDER BY soldiSpesi DESC"
 	if Global.nomeSearch != "":
-		query = "name LIKE '" +  Global.nomeSearch + "%'"
-	database.query("SELECT name, cognome, id FROM clients ORDER BY soldiSpesi DESC")
+		print("BINGO")
+		query = "SELECT name, cognome, id FROM clients WHERE name LIKE '" +  Global.nomeSearch + "%'"
+	database.query(query)
 	var utenti = database.query_result
 	for i in range(5):
 		var index = indice + i
