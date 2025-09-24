@@ -82,3 +82,26 @@ func _on_delete_btn_pressed() -> void:
 		database.delete_rows("clients", "id= '" + id + "'")
 		get_tree().change_scene_to_file("res://main.tscn")
 	pass
+
+
+func _on_add_money_btn_pressed() -> void:
+	var soldi = get_node("addSoldi").text
+	var existingSoldi = get_node("soldi").text
+	var existingPoints = get_node("punti").text
+	get_node("soldi").text = str(float(soldi)+float(existingSoldi))
+	get_node("punti").text = str(int(existingPoints)+int(soldi))
+	pass 
+
+
+func _on_min_money_pressed() -> void:
+	var soldi = get_node("addSoldi").text
+	var existingSoldi = get_node("soldi").text
+	get_node("soldi").text = str(float(existingSoldi)-float(soldi))
+	pass 
+
+
+func _on_spend_point_pressed() -> void:
+	var soldi = get_node("addSoldi").text
+	var existingPoints = get_node("punti").text
+	get_node("punti").text = str(int(existingPoints)-int(soldi))
+	pass # Replace with function body.

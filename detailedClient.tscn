@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://beltq7kglsd6h"]
+[gd_scene load_steps=11 format=3 uid="uid://beltq7kglsd6h"]
 
 [ext_resource type="Script" uid="uid://8dpdmjep43oc" path="res://detailed_client.gd" id="1_p8u6h"]
 [ext_resource type="Texture2D" uid="uid://c7eby4loknd6l" path="res://sprites/pixil-frame-0 (20).png" id="2_xjeii"]
@@ -7,6 +7,8 @@
 [ext_resource type="Texture2D" uid="uid://hl2r1gt2cl1h" path="res://sprites/btns/pixil-frame-0 (22).png" id="5_xjeii"]
 [ext_resource type="Texture2D" uid="uid://dkribhoybe5mg" path="res://sprites/btns/arrow-left-thick.svg" id="6_7mcvt"]
 [ext_resource type="Texture2D" uid="uid://cisdgs685wgwb" path="res://sprites/btns/delete-alert-outline.svg" id="7_0pahs"]
+[ext_resource type="Texture2D" uid="uid://dh5hkmnda11us" path="res://sprites/992683.png" id="8_7mcvt"]
+[ext_resource type="Texture2D" uid="uid://x3j0ndqafbbg" path="res://sprites/pngimg.com - plus_PNG106.png" id="9_0pahs"]
 
 [sub_resource type="Theme" id="Theme_abd17"]
 default_font = ExtResource("4_0pahs")
@@ -40,13 +42,13 @@ texture = ExtResource("3_7mcvt")
 
 [node name="client4" type="Sprite2D" parent="."]
 texture_filter = 1
-position = Vector2(394, 611)
+position = Vector2(394, 767)
 scale = Vector2(10.74, 5.30769)
 texture = ExtResource("3_7mcvt")
 
 [node name="client5" type="Sprite2D" parent="."]
 texture_filter = 1
-position = Vector2(325.75, 792)
+position = Vector2(315.75, 924)
 scale = Vector2(7.61, 5.30769)
 texture = ExtResource("3_7mcvt")
 
@@ -69,18 +71,18 @@ placeholder_text = "Tel. number
 
 [node name="soldi" type="TextEdit" parent="."]
 offset_left = 124.0
-offset_top = 541.0
-offset_right = 662.0
-offset_bottom = 681.0
+offset_top = 697.0
+offset_right = 670.0
+offset_bottom = 837.0
 theme = SubResource("Theme_abd17")
 placeholder_text = "money
 "
 
 [node name="punti" type="TextEdit" parent="."]
-offset_left = 134.0
-offset_top = 720.0
-offset_right = 518.0
-offset_bottom = 862.0
+offset_left = 124.0
+offset_top = 852.0
+offset_right = 508.0
+offset_bottom = 994.0
 theme = SubResource("Theme_abd17")
 placeholder_text = "points
 "
@@ -95,10 +97,10 @@ placeholder_text = "name & surname"
 
 [node name="list" type="TextureButton" parent="."]
 texture_filter = 1
-offset_left = 136.0
-offset_top = 968.0
-offset_right = 347.0
-offset_bottom = 1085.0
+offset_left = 44.0
+offset_top = 1038.0
+offset_right = 255.0
+offset_bottom = 1155.0
 texture_normal = ExtResource("3_7mcvt")
 texture_pressed = ExtResource("5_xjeii")
 stretch_mode = 0
@@ -111,10 +113,10 @@ texture = ExtResource("6_7mcvt")
 
 [node name="deleteBtn" type="TextureButton" parent="."]
 texture_filter = 1
-offset_left = 624.0
-offset_top = 960.0
-offset_right = 763.0
-offset_bottom = 1087.0
+offset_left = 634.0
+offset_top = 1030.0
+offset_right = 773.0
+offset_bottom = 1157.0
 texture_normal = ExtResource("3_7mcvt")
 texture_pressed = ExtResource("5_xjeii")
 stretch_mode = 0
@@ -125,5 +127,64 @@ position = Vector2(79, 62)
 scale = Vector2(4.91667, 4.20833)
 texture = ExtResource("7_0pahs")
 
+[node name="moneyZone" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(404.25, 606)
+scale = Vector2(7.39, 5.30769)
+texture = ExtResource("3_7mcvt")
+
+[node name="addSoldi" type="TextEdit" parent="."]
+offset_left = 214.0
+offset_top = 534.0
+offset_right = 593.0
+offset_bottom = 677.0
+theme = SubResource("Theme_abd17")
+placeholder_text = "add. money"
+
+[node name="addMoneyBtn" type="TextureButton" parent="."]
+offset_left = 627.0
+offset_top = 539.0
+offset_right = 770.0
+offset_bottom = 674.0
+texture_normal = ExtResource("3_7mcvt")
+texture_pressed = ExtResource("5_xjeii")
+stretch_mode = 0
+
+[node name="minMoney" type="TextureButton" parent="."]
+offset_left = 52.0
+offset_top = 539.0
+offset_right = 195.0
+offset_bottom = 674.0
+texture_normal = ExtResource("3_7mcvt")
+texture_pressed = ExtResource("5_xjeii")
+stretch_mode = 0
+
+[node name="spendPoint" type="TextureButton" parent="."]
+offset_left = 521.0
+offset_top = 856.0
+offset_right = 664.0
+offset_bottom = 991.0
+texture_normal = ExtResource("3_7mcvt")
+texture_pressed = ExtResource("5_xjeii")
+stretch_mode = 0
+
+[node name="992683" type="Sprite2D" parent="."]
+position = Vector2(125, 606)
+scale = Vector2(0.208008, 0.199219)
+texture = ExtResource("8_7mcvt")
+
+[node name="Pngimg_com-PlusPng106" type="Sprite2D" parent="."]
+position = Vector2(695, 604)
+scale = Vector2(0.392578, 0.347656)
+texture = ExtResource("9_0pahs")
+
+[node name="992684" type="Sprite2D" parent="."]
+position = Vector2(593, 922)
+scale = Vector2(0.208008, 0.199219)
+texture = ExtResource("8_7mcvt")
+
 [connection signal="pressed" from="list" to="." method="_on_list_pressed"]
 [connection signal="pressed" from="deleteBtn" to="." method="_on_delete_btn_pressed"]
+[connection signal="pressed" from="addMoneyBtn" to="." method="_on_add_money_btn_pressed"]
+[connection signal="pressed" from="minMoney" to="." method="_on_min_money_pressed"]
+[connection signal="pressed" from="spendPoint" to="." method="_on_spend_point_pressed"]
